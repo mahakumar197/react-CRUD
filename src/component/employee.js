@@ -500,3 +500,4 @@ const employee = [
     city: "Dawei",
   },
 ];
+export default employee;

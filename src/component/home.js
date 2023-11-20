@@ -1,16 +1,16 @@
 import React from "react";
 import employee from "./employee";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Table } from "react-bootstrap";
+// import { Table } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.css";
 
-function home() {
+function Home() {
   return (
-    <div>
-      <Table striped bordered hovered>
+    <div className="container">
+      <table className="table table-striped">
         <thead>
           <tr>
-            <th>first_name</th>
-            <th>City</th>
+            <th scope="col">first_name</th>
+            <th scope="col">City</th>
           </tr>
         </thead>
         <tbody>
@@ -18,18 +18,16 @@ function home() {
             ? employee.map((m) => {
                 return (
                   <tr>
-                    <td>
-                      {m.first_name}
-                      {m.city}
-                    </td>
+                    <td>{m.first_name}</td>
+                    <td>{m.city}</td>
                   </tr>
                 );
               })
             : "no record found"}
         </tbody>
-      </Table>
+      </table>
     </div>
   );
 }
 
-export default home;
+export default Home;
